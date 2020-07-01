@@ -10,7 +10,6 @@ const player = {
     },
     events:{
         '#btnPause':'pause',
-        '#btnPlay':'play',
         '#btnSlow':'slow',
         '#btnNormal':'normal',
         '#btnFast':'fast'
@@ -40,21 +39,23 @@ const player = {
         player.ui.demo.scrollTop = player.ui.demo.scrollHeight
     },
     play:()=>{
-        player.pause()
         player.id = setInterval(player.run, player.time)
     },
     pause:()=>{
         window.clearInterval(player.id)
     },
     slow:()=>{
+        player.pause()
         player.time = 250
         player.play()
     },
     normal:()=>{
+        player.pause()
         player.time = 80
         player.play()
     },
     fast:()=>{
+        player.pause()
         player.time = 10
         player.play()
     }
