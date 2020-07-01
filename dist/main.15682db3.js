@@ -176,27 +176,25 @@ var player = {
     player.ui.demo.scrollTop = player.ui.demo.scrollHeight;
   },
   play: function play() {
+    player.pause();
     player.id = setInterval(player.run, player.time);
   },
   pause: function pause() {
     window.clearInterval(player.id);
   },
   slow: function slow() {
-    player.pause();
     player.time = 250;
     player.play();
   },
   normal: function normal() {
-    player.pause();
     player.time = 80;
     player.play();
   },
   fast: function fast() {
-    player.pause();
     player.time = 10;
     player.play();
   }
 };
 player.init();
 },{"./css.js":"K4Xi"}]},{},["epB2"], null)
-//# sourceMappingURL=main.e0f36b39.js.map
+//# sourceMappingURL=main.15682db3.js.map
